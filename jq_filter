@@ -1,0 +1,1 @@
+jq 'with_entries(.value.senses |= [.[] | select(.english_definitions)]) | with_entries(.value.collocations[]?.word.senses |= [.[] | select(.english_definitions)])'
